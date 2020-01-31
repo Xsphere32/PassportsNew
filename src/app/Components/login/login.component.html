@@ -1,0 +1,11 @@
+<div class="login-form">
+  <span>User Name</span>
+  <hr/>
+  <input type="text" pInputText [(ngModel)]="employee.login">
+  <hr/>
+  <span>Password</span>
+  <hr/>
+  <input type="password" pInputText [(ngModel)]="employee.password">
+  <hr/>
+  <button pButton type="button" (click)="Authorize()" label="Login"></button>
+</div>
