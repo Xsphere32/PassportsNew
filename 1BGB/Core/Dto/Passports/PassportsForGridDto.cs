@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,5 +14,6 @@ namespace Core.Dto
         public string MacAddress { get; set; }
         public string Ipaddress { get; set; }
         public string Room { get; set; }
+        public string OS { get; set; }
     }
 }

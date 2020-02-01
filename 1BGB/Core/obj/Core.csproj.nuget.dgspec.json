@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\1BGB\\Core\\Core.csproj": {}
+    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Work\\1BGB\\Core\\Core.csproj": {
+    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\1BGB\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Work\\1BGB\\Core\\Core.csproj",
+        "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\1BGB\\Core\\obj\\",
+        "outputPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
