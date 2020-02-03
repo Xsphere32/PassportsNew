@@ -2,17 +2,13 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Autofac/4.2.0": {
+      "Autofac/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0",
-          "System.ComponentModel": "4.0.1"
-        },
         "compile": {
-          "lib/netstandard1.1/Autofac.dll": {}
+          "lib/netstandard2.1/Autofac.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/Autofac.dll": {}
+          "lib/netstandard2.1/Autofac.dll": {}
         }
       },
       "AutoMapper/9.0.0": {
@@ -768,7 +764,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/System.ComponentModel.dll": {}
+          "ref/netstandard1.0/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.ComponentModel.dll": {}
@@ -2016,19 +2012,25 @@
     }
   },
   "libraries": {
-    "Autofac/4.2.0": {
-      "sha512": "WHiPMqI8FYa4Mf4yTb0P/aBibHn7Z0B9r02CEXy9oAAkQMJpHxLOE45iIMMW+xthXu26V9nRIz7o5lA7V3ztgw==",
+    "Autofac/5.0.0": {
+      "sha512": "U1aCHUMXuG7DDJ5JmTXF2kInXpad3Fuow+voSXEVunDHW4OkD8GDWJjleHpJPanpP+3dUQYLAM9R2lftGiQSbA==",
       "type": "package",
-      "path": "autofac/4.2.0",
+      "path": "autofac/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "autofac.4.2.0.nupkg.sha512",
+        "autofac.5.0.0.nupkg.sha512",
         "autofac.nuspec",
-        "lib/net45/Autofac.dll",
-        "lib/net45/Autofac.xml",
-        "lib/netstandard1.1/Autofac.dll",
-        "lib/netstandard1.1/Autofac.xml"
+        "icon.png",
+        "lib/net461/Autofac.dll",
+        "lib/net461/Autofac.pdb",
+        "lib/net461/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.pdb",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.pdb",
+        "lib/netstandard2.1/Autofac.xml"
       ]
     },
     "AutoMapper/9.0.0": {
@@ -6872,7 +6874,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 9.0.0",
-      "Autofac >= 4.2.0",
+      "Autofac >= 5.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
@@ -6923,7 +6925,7 @@
           },
           "Autofac": {
             "target": "Package",
-            "version": "[4.2.0, )"
+            "version": "[5.0.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
