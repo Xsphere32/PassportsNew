@@ -13,7 +13,7 @@ namespace Core.Helpers
     public IQueryable<Passport> GetFilteredQuery(IQueryable<Passport> query, PassportFilterDto filter)
     {
       if (!string.IsNullOrEmpty(filter.SearchText))
-        return query.Where(i => i.Room == filter.SearchText);
+        return query.Where(i => i.Room.StartsWith(filter.SearchText));
       return query;
     }
   }
