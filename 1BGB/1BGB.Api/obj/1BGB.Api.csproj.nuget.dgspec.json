@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\1BGB\\1BGB.Api\\1BGB.Api.csproj": {}
+    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj": {}
   },
   "projects": {
-    "C:\\Work\\1BGB\\1BGB.Api\\1BGB.Api.csproj": {
+    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
+        "projectUniqueName": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
         "projectName": "1BGB.Api",
-        "projectPath": "C:\\Work\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
+        "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
         "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\1BGB\\1BGB.Api\\obj\\",
+        "outputPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Work\\1BGB\\Core\\Core.csproj": {
-                "projectPath": "C:\\Work\\1BGB\\Core\\Core.csproj"
+              "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {
+                "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj"
               }
             }
           }
@@ -50,6 +50,18 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Autofac.WebApi2": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.AspNet.WebApi.Cors": {
               "target": "Package",
               "version": "[5.2.7, )"
@@ -65,6 +77,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[3.1.1, )"
             },
@@ -95,14 +111,14 @@
         }
       }
     },
-    "C:\\Work\\1BGB\\Core\\Core.csproj": {
+    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\1BGB\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Work\\1BGB\\Core\\Core.csproj",
+        "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\1BGB\\Core\\obj\\",
+        "outputPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -132,6 +148,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -27,8 +27,8 @@ namespace Core.Models
         public string Etc { get; set; }
         public string OS { get; set; }
         public string Soft { get; set; }
-        public Employee Employee { get; set; }
-        public Department Department { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Department Department { get; set; }
         
     }
 }
