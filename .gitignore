@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+1BGB/1BGB.Api/.vs/1BGB/v16/Server/sqlite3/storage.ide-shm
+
+1BGB/1BGB.Api/.vs/1BGB/v16/Server/sqlite3/storage.ide-wal
