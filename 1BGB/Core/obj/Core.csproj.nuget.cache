@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "qSolQmRvYV3myWcv+x8Ns6BxgAi4LR47J1o5xNUfkzvJ6pkrhNFletaHhsDhMU4SsWr1MQZW8VnY9NFaBZNhwQ==",
+=======
+  "dgSpecHash": "M3GnEQ5nwwWs6S4cxdBX5VHI6xUsR6PeO//SFGvVOY8hX+m2Aiwj0pf+uNlztKLj7McXpNrCvO8FBQ9+UEmLig==",
+>>>>>>> API_Branch
   "success": true
 }
