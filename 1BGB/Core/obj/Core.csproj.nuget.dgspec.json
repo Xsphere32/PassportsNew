@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {}
+    "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {
+    "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
+        "projectUniqueName": "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\obj\\",
+        "projectPath": "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\xsphere.1BGB\\.nuget\\packages\\",
+        "outputPath": "E:\\Work\\PassportsNew\\1BGB\\Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xsphere.1BGB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

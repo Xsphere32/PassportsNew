@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   Authorize() {
-    this.login.Authorize(this.employee);
+    this.login.Authorize(this.employee.Login, this.employee.Password);
   }
 
 }
