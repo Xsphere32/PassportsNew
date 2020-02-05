@@ -4,7 +4,7 @@ import {PassportsGridComponent} from './app/Components/passports-grid/passports-
 import {AuthGuard} from './app/Core/Services/login/auth-guard.service';
 
 export const appRoutes: Routes = [
-  {path: '', component: PassportsGridComponent},
+  {path: 'home', component: PassportsGridComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'passports', component: PassportsGridComponent}
+  {path: 'passports', component: PassportsGridComponent, canActivate: [AuthGuard]}
 ]
