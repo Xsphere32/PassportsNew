@@ -47,7 +47,7 @@
             },
             "Autofac": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

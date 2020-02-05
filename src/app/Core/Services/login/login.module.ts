@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import {Employee} from '../../Models/Employee/employee.model';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 
 
@@ -16,33 +14,29 @@ import { map } from 'rxjs/operators';
 })
 export class LoginModule {
   private invalidLogin: boolean;
-  currentUserSubject: BehaviorSubject<Employee>;
-  user: Observable<Employee>;
-  employee: Employee = new Employee();
 
   constructor(private http: HttpClient,
-              private router: Router) {
-                this.currentUserSubject = new BehaviorSubject<Employee>(JSON.parse(localStorage.getItem('currentUser')));
-                this.user = this.currentUserSubject.asObservable();
-              }
+              private router: Router) {}
 
 
-  public get currentUserValue() : Employee{
-      return this.currentUserSubject.value;
-  }
-
-  public Authorize(login: string, password: string) {
-    this.http.post<any>('https://localhost:5001/api/auth/login/', {login, password})
-    .pipe(map(user => {
-      if(user && user.token){
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubject.next(user);
-      }
-      return user;
-    })) 
+  public Authorize(employee: Employee) {
+    const credentials = JSON.stringify(employee);
+    this.http.post('https://localhost:5001/api/auth/login/', credentials, {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'
+      })
+    }).subscribe(response => {
+      const token = (response as any).token;
+      localStorage.setItem('jwt', token);
+      this.invalidLogin = false;
+      this.router.navigate(['passports']);
+    }, error => {
+      this.invalidLogin = true;
+    });
   }
 
   public Logout() {
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('jwt');
+    this.router.navigate(['login']);
   }
 }

@@ -16,8 +16,6 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AuthGuard} from './Core/Services/login/auth-guard.service';
 import {appRoutes} from '../routes';
-import {TabMenuModule} from 'primeng';
-import { HomeComponent } from './Components/home/home.component';
 
 export function tokenGetter() {
     return localStorage.getItem('jwt');
@@ -29,8 +27,7 @@ export function tokenGetter() {
     AppComponent,
     HeaderComponent,
     PassportsGridComponent,
-    LoginComponent,
-    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -46,13 +43,12 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter,
-        whitelistedDomains: ['http://localhost:5000', 'https://localhost:5001'],
+        whitelistedDomains: ['http://localhost:5000'],
         blacklistedRoutes: []
       }
     }),
     RouterModule.forRoot(appRoutes),
-    MegaMenuModule,
-    TabMenuModule,
+    MegaMenuModule
   ],
   providers: [HttpClient, AuthGuard],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 using Autofac;
 using AutoMapper;
@@ -73,7 +74,10 @@ namespace _1BGB.Api
 
     public void ConfigureContainer(ContainerBuilder builder)
     {
-      // Register your own things directly with Autofac, like:
+      var assembly = AppDomain.CurrentDomain.GetAssemblies().Where(a => (a.FullName.StartsWith("Core"))).ToArray();
+      builder.RegisterAssemblyTypes(assembly).Where(a =>
+        a.IsPublic && !string.IsNullOrWhiteSpace(a.Namespace) && a.Namespace.EndsWith(".Helpers") &&
+        a.GetInterfaces().Any()).AsImplementedInterfaces();
       builder.RegisterGeneric(typeof(Repository<>)).AsImplementedInterfaces().InstancePerLifetimeScope();
     }
 
