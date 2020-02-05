@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Models;
@@ -16,7 +15,5 @@ namespace Core
     T Update(T model);
 
     Task<bool> DeleteById(int id);
-
-    IQueryable<T> Queryable();
   }
 }

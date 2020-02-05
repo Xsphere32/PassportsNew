@@ -10,7 +10,7 @@ namespace Core.Repository
 {
   public class Repository<T> : IRepository<T>, IDisposable where T : BaseModel
   {
-    private readonly DataContext _dataContext;
+    private DataContext _dataContext;
 
     /// <summary>
     /// 
@@ -42,19 +42,11 @@ namespace Core.Repository
       return await _dataContext.Set<T>().Where(i => i.Id == id).FirstOrDefaultAsync();
     }
 
-    public IQueryable<T> Queryable()
-    {
-      return _dataContext.Set<T>().AsQueryable();
-    }
-
     public T Update(T model)
     {
       var savedEntity = _dataContext.Set<T>().Update(model).Entity;
       _dataContext.SaveChanges();
       return savedEntity;
     }
-
-
-
   }
 }

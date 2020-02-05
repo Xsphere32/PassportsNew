@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate{
   }
 
   canActivate() {
-    const token = localStorage.getItem('jwt');
+    const token = localStorage.getItem('currentUser');
     if (token && !this.jwtHelper.isTokenExpired(token)) {
       return true;
     }

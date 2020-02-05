@@ -1,6 +1,1 @@
-POST https://localhost:5001/api/passports
-Content-Type: application/json
-
-{
-    "SearchText": "Провизорская 2"
-}
+GET  https://localhost:5001/api/passports
