@@ -28,3 +28,13 @@ C:\Work\WebstormProjects\passports-app\1BGB\Core\obj\Debug\netcoreapp3.1\Core.As
 C:\Work\WebstormProjects\passports-app\1BGB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
 C:\Work\WebstormProjects\passports-app\1BGB\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Work\WebstormProjects\passports-app\1BGB\Core\obj\Debug\netcoreapp3.1\Core.pdb
+E:\Work\PassportsNew\1BGB\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+E:\Work\PassportsNew\1BGB\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.json
+E:\Work\PassportsNew\1BGB\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.dev.json
+E:\Work\PassportsNew\1BGB\Core\bin\Debug\netcoreapp3.1\Core.dll
+E:\Work\PassportsNew\1BGB\Core\bin\Debug\netcoreapp3.1\Core.pdb
+E:\Work\PassportsNew\1BGB\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+E:\Work\PassportsNew\1BGB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+E:\Work\PassportsNew\1BGB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+E:\Work\PassportsNew\1BGB\Core\obj\Debug\netcoreapp3.1\Core.dll
+E:\Work\PassportsNew\1BGB\Core\obj\Debug\netcoreapp3.1\Core.pdb

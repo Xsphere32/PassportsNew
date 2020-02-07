@@ -32,14 +32,21 @@ export class LoginModule {
   }
 
   public Authorize(login: string, password: string) {
-    this.http.post<any>('https://localhost:5001/api/auth/login/', {login, password})
-    .pipe(map(user => {
-      if(user && user.token){
+    var credentials = JSON.stringify({login, password});
+  this.http.post<any>('https://localhost:5001/api/auth/login/', credentials, {
+    headers: new HttpHeaders({
+      "Content-Type": "application/json"
+    })
+  })
+    .subscribe(user => {
+      if (user && user.token){
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
       }
       return user;
-    })) 
+    }, err => {
+      console.error(err);
+    })
   }
 
   public Logout() {

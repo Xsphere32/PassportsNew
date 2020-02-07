@@ -16,11 +16,11 @@ export class HeaderComponent implements OnInit {
   activateItem: MenuItem;
   ngOnInit() {
     this.menuItems = [
-      {label: 'Главная', icon: 'fa fa-fw fa-home' ,  command: event => this.router.navigate(['login'])},
+      {label: 'Главная', icon: 'fa fa-fw fa-home' ,  command: event => this.router.navigate(['home'])},
       {label: 'Таблица паспортов', icon: 'fa fa-fw fa-book', command: event => this.router.navigate(['passports'])},
       {label: 'Выход', icon: 'fa fa-sign-out', command: event => this.logout() }
     ];
-    this.activateItem =this.menuItems[1];
+    this.activateItem =this.menuItems[0];
   }
 
   logout(){

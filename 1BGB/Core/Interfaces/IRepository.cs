@@ -18,5 +18,9 @@ namespace Core
     Task<bool> DeleteById(int id);
 
     IQueryable<T> Queryable();
+
+    Task<T> GetByName(string name);
+
+    Task<T> GetByLogin(string login);
   }
 }

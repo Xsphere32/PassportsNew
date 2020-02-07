@@ -1,12 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Core.Dto
 {
-    public class PassportsForEditDto
+    public class PassportsForEditDto : BaseDto
     {
-        public int Id { get; set; }
         public string Person { get; set; }
         public string Room { get; set; }
         public string Model { get; set; }

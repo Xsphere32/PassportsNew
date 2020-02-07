@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  currentUser: Employee;
+  currentUser: boolean;
   
   constructor(private authService: LoginModule,
               private router: Router) {
-    this.authService.user.subscribe((x=> this.currentUser = x));
   }
 
   
@@ -22,5 +21,10 @@ export class AppComponent implements OnInit {
     console.log(event);
   }
   ngOnInit() {
+    if(localStorage.getItem('currentUser')){
+      this.currentUser = true;
+    } else this.currentUser=false;
+    console.log(this.currentUser);
   }
+  
 }
