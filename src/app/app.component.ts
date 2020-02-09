@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Employee } from './Core/Models/Employee/employee.model';
-import { LoginModule } from './Core/Services/login/login.module';
 import { Router } from '@angular/router';
+import {AuthenticationService} from './Core/Services/login/authorization';
 
 @Component({
   selector: 'app-root',
@@ -9,22 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  currentUser: boolean;
-  
-  constructor(private authService: LoginModule,
+  currentUser: Employee;
+
+  constructor(private authService: AuthenticationService,
               private router: Router) {
+    this.authService.currentUser.subscribe(x => this.currentUser = x);
   }
 
-  
+
 
   public ContextMenu(event) {
     console.log(event);
   }
   ngOnInit() {
-    if(localStorage.getItem('currentUser')){
-      this.currentUser = true;
-    } else this.currentUser=false;
-    console.log(this.currentUser);
   }
-  
+
 }

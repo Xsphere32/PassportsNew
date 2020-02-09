@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PassportForGrid} from '../../Core/Models/Passports/passportForGrid.model';
 import {PassportsService} from '../../Core/Services/Data/passports.service';
-import { TableModule } from 'primeng/table';
+import {MenuItem} from 'primeng';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-passports-grid',
@@ -10,21 +11,18 @@ import { TableModule } from 'primeng/table';
 })
 export class PassportsGridComponent implements OnInit {
   passports: PassportForGrid[];
-  constructor(private passportService: PassportsService ) { }
+  items: MenuItem[]; // Пункты контекстного меню
+  selectedPassport: PassportForGrid;
+  constructor(private passportService: PassportsService,
+              private router: Router) { }
 
 
   ngOnInit() {
-    this.passports = [
-      new PassportForGrid(1,"localhost","asu-0001", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.1", "Кабинет зав. отделением"),
-      new PassportForGrid(1,"localhost","asu-0002", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.2", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0003", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.3", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0004", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.4", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0005", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.5", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0006", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.6", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0007", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.7", "Ординаторская"),
-      new PassportForGrid(1,"localhost","asu-0008", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.8", "Пост"),
-      new PassportForGrid(1,"localhost","asu-0009", "Listopadov", "Pulmonology", "00-00-00-00-00", "192.168.0.9", "Старшая медсестра")
-      
-    ]
+    this.items = [
+      {label: 'Открыть/редактировать', icon: 'pi pi-pencil', command: (event) => {
+        this.router.navigate([`/editPassport/${this.selectedPassport.id}`]);
+        }},
+    ];
+    this.passportService.getDataForGrid().subscribe(x => this.passports = x);
   }
 }

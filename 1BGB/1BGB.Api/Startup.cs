@@ -62,7 +62,7 @@ namespace _1BGB.Api
           ValidateIssuer = true,
           ValidateAudience = true,
           ValidateLifetime = true,
-          ValidateIssuerSigningKey = true,
+          ValidateIssuerSigningKey = false,
           ValidIssuer = "https://localhost:5001",
           ValidAudience = "https://localhost:5001",
           IssuerSigningKey = new SymmetricSecurityKey(key: Encoding.UTF8.GetBytes(s: "super@SecretShit"))

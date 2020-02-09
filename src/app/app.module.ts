@@ -10,14 +10,16 @@ import { JwtModule } from '@auth0/angular-jwt';
 
 // NgModules
 import {InputTextModule} from 'primeng/inputtext';
-import {ButtonModule, DialogModule, MegaMenuModule, TableModule} from 'primeng';
-import {LoginModule} from './Core/Services/login/login.module';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {ButtonModule, ChipsModule, ContextMenuModule, DialogModule, MegaMenuModule, TableModule} from 'primeng';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AuthGuard} from './Core/Services/login/auth-guard.service';
-import {appRoutes} from '../routes';
+import {appRoutingModule} from '../routes';
 import {TabMenuModule} from 'primeng';
 import { HomeComponent } from './Components/home/home.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import {JwtInterceptor} from './Core/Services/login/jwt-interceptor';
+import { PassportComponent } from './Components/passport/passport.component';
 
 export function tokenGetter() {
     return localStorage.getItem('jwt');
@@ -31,6 +33,7 @@ export function tokenGetter() {
     PassportsGridComponent,
     LoginComponent,
     HomeComponent,
+    PassportComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,6 @@ export function tokenGetter() {
     InputTextModule,
     FormsModule,
     ButtonModule,
-    LoginModule,
     HttpClientModule,
     JwtModule.forRoot({
       config: {
@@ -50,11 +52,18 @@ export function tokenGetter() {
         blacklistedRoutes: []
       }
     }),
-    RouterModule.forRoot(appRoutes),
+    appRoutingModule,
     MegaMenuModule,
     TabMenuModule,
+    ReactiveFormsModule,
+    ContextMenuModule,
+    ChipsModule,
   ],
-  providers: [HttpClient, AuthGuard],
+  providers: [HttpClient, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

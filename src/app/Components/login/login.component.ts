@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from '../../Core/Models/Employee/employee.model';
-import {LoginModule} from '../../Core/Services/login/login.module';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {first} from 'rxjs/operators';
+import {AuthenticationService} from '../../Core/Services/login/authorization';
+import {MenuItem} from 'primeng';
 
 @Component({
   selector: 'app-login',
@@ -10,15 +13,53 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   employee: Employee = new Employee();
-  constructor(private login: LoginModule, private router: Router) { }
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl: string;
+
+
+  constructor(private login: AuthenticationService,
+              private router: Router,
+              private  route: ActivatedRoute,
+              private formBuilder: FormBuilder) {
+    if (this.login.currentUserValue) {
+      this.router.navigate(['/']);
+    }
+  }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      Login : ['', Validators.required],
+      Password : ['', Validators.required]
+    });
+
+
+
+    this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
   }
 
-  Authorize() {
-    console.log(this.employee);
-    this.login.Authorize(this.employee.Login, this.employee.Password);
-    this.router.navigate(['passports']);
+  get f() { return this.loginForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    this.loading = true;
+    this.login.login(this.f.Login.value, this.f.Password.value)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate([this.returnUrl]);
+        },
+        err => {
+          this.loading = false;
+        }
+      );
   }
 
+  // Context m
 }

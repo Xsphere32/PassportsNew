@@ -3477,11 +3477,12 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
+      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3586,11 +3587,12 @@
       ]
     },
     "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "T5NvFgmHX0WH4c7lP72krsnk+IJI10vJf2j2twGE+5QBRA4RyRAgD+ZjEgdmpLOjW4B+nZGaadewTCUcR899OQ==",
+      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
       "type": "package",
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3929,11 +3931,12 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "LE/oChpRvkSi3U25u0KnJcI44JeDZ1QJCyN4qFDx2uusEypdqR24w7lKYw21eYe5esuCBuc862wRmpF63Yy1KQ==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4193,11 +4196,12 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7822,23 +7826,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xsphere.1BGB\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\kenni\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Work\\PassportsNew\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
+      "projectUniqueName": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
       "projectName": "1BGB.Api",
-      "projectPath": "E:\\Work\\PassportsNew\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
-      "packagesPath": "C:\\Users\\xsphere.1BGB\\.nuget\\packages\\",
-      "outputPath": "E:\\Work\\PassportsNew\\1BGB\\1BGB.Api\\obj\\",
+      "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\1BGB.Api.csproj",
+      "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\1BGB.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\xsphere.1BGB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7851,8 +7851,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj": {
-              "projectPath": "E:\\Work\\PassportsNew\\1BGB\\Core\\Core.csproj"
+            "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj": {
+              "projectPath": "C:\\Work\\WebstormProjects\\passports-app\\1BGB\\Core\\Core.csproj"
             }
           }
         }

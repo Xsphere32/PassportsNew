@@ -34,7 +34,7 @@ namespace _1BGB.Api.Controllers
         return BadRequest("Invalid Employee Credentials");
       }
 
-      var credentials = await _employeeRepository.GetByLogin(employee.Login);
+      var credentials = (await _employeeRepository.GetAllAsync()).FirstOrDefault(i => i.Login == employee.Login);
 
       if (credentials != null && credentials.Password == employee.Password)
       {
@@ -44,7 +44,11 @@ namespace _1BGB.Api.Controllers
         var token = new JwtSecurityToken(
             issuer: "https://localhost:5001",
             audience: "https://localhost:5001",
-            claims: new List<Claim>(),
+            claims: new List<Claim>
+            {
+              new Claim(ClaimTypes.Name,credentials.Name),
+              new Claim(ClaimTypes.Role, "Administrator")
+            },
             expires: DateTime.Now.AddDays(3),
             signingCredentials: signInCred
         );

@@ -19,8 +19,8 @@ namespace Core
 
     IQueryable<T> Queryable();
 
-    Task<T> GetByName(string name);
+    //Task<T> GetByName(string name);
 
-    Task<T> GetByLogin(string login);
+    //Task<T> GetByLogin(string login);
   }
 }

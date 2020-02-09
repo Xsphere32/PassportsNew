@@ -54,14 +54,14 @@ namespace Core.Repository
       return savedEntity;
     }
 
-    public async Task<T> GetByName(string name)
-    {
-      return await _dataContext.Set<T>().Where(i => i.Name == name).FirstOrDefaultAsync();
-    }
+    //public async Task<T> GetByName(string name)
+    //{
+    //  return await _dataContext.Set<T>().Where(i => i.Name == name).FirstOrDefaultAsync();
+    //}
 
-    public async Task<T> GetByLogin(string login)
-    {
-      return await _dataContext.Set<T>().Where(i => i.Login == login).FirstOrDefaultAsync();
-    }
+    //public async Task<T> GetByLogin(string login)
+    //{
+    //  return await _dataContext.Set<T>().Where(i => i.Login == login).FirstOrDefaultAsync();
+    //}
   }
 }

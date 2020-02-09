@@ -24,6 +24,7 @@ namespace Core.Dto
         public string Etc { get; set; }
         public string OS { get; set; }
         public string Soft { get; set; }
+        public string EmployeeName { get; set; }
         public EmployeeDto Employee { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace Core.Models
 {
   public class Employee : BaseModel
   {
+    public string Name { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
     [NotMapped]

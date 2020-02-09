@@ -1,5 +1,9 @@
-<p-table [value]="passports">
-  <ng-template pTemplate="header">
+<p-table [value]="passports"
+         [(contextMenuSelection)]="selectedPassport"
+         [paginator]="true"
+         [rows]="22"
+         [contextMenu]="cm">
+  <ng-template pTemplate="header" >
     <tr>
       <th>ID</th>
       <th>Hostname</th>
@@ -11,8 +15,8 @@
       <th>IP Address</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-passport>
-      <tr>
+  <ng-template pTemplate="body" let-rowData let-passport>
+      <tr [pContextMenuRow]="rowData">
         <td>{{ passport.id }}</td>
         <td>{{ passport.hostName }}</td>
         <td>{{ passport.inventaryNumber }}</td>
@@ -24,3 +28,4 @@
       </tr>
   </ng-template>
 </p-table>
+<p-contextMenu #cm [model]="items"></p-contextMenu>

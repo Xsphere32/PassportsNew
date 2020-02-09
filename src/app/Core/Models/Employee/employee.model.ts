@@ -3,5 +3,5 @@ export class Employee {
   public Name: string;
   public Login: string;
   public Password: string;
-  public Token: string;
+  public token: string;
 }
